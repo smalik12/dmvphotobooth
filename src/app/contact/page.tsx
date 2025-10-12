@@ -100,8 +100,8 @@ export default function Contact() {
         </Typography>
 
         <Typography variant="body1" sx={{ mb: 3, textAlign: 'center' }}>
-          Have a question, idea, or just want to say hi? I'd love to hear from
-          you. Fill out the form below, or email/call me directly.
+          Have a question, idea, or just want to say hi? I&apos;d love to hear
+          from you. Fill out the form below, or email/call me directly.
         </Typography>
 
         <Box

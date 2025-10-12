@@ -3,7 +3,6 @@
 import { Box, Button, Typography, useTheme } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
-import theme from '@/theme'; // or wherever you export your font object
 
 export default function HeroSection() {
   const theme = useTheme();
