@@ -10,7 +10,7 @@ import CTASection from '@/components/Home/CTASection';
 
 export default function Home() {
   return (
-    <Box style={{ backgroundColor: theme.palette.secondary.main }}>
+    <Box sx={{ backgroundColor: theme.palette.secondary.main }}>
       {/* Hero Section */}
       <HeroSection />
 

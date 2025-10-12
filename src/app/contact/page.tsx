@@ -17,8 +17,7 @@ import {
   FaEnvelope,
   FaPhone,
 } from 'react-icons/fa';
-import theme from '@/theme'; // assuming theme exports shadows too
-// If shadows isn't exported, import from your fonts file
+import theme from '@/theme';
 
 export default function Contact() {
   const [form, setForm] = useState({

@@ -23,9 +23,25 @@ export default function CTASection() {
           Ready to Book Your Event?
         </Typography>
         <Link href="/contact" passHref legacyBehavior>
-          <Button variant="contained" size="large" color="success">
+          <Button
+            variant="contained"
+            size="large"
+            sx={{
+              backgroundColor: 'primary.main',
+              color: '#fff',
+              borderRadius: '9999px',
+              px: 4,
+              py: 1.5,
+              fontWeight: 'bold',
+              transition: 'all 0.3s ease',
+              '&:hover': {
+                backgroundColor: 'primary.dark',
+                transform: 'scale(1.05)',
+                boxShadow: '0 6px 20px rgba(0,0,0,0.25)',
+              },
+            }}
+          >
             Contact us!
-            {/* USE CORNFLOWER BLUE */}
           </Button>
         </Link>
       </Box>

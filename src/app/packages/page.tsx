@@ -34,7 +34,6 @@ const SectionCard = ({
       variant="h5"
       gutterBottom
       fontWeight="bold"
-      sx={{ fontFamily: 'Shadows Into Light, cursive' }}
       className="text-center font-semibold text-gray-800"
     >
       {title}
@@ -53,14 +52,13 @@ export default function PackagesPage() {
   const [tabValue, setTabValue] = useState(0);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen mt-20">
       <div className="max-w-6xl mx-auto px-4 py-12 mt-8">
         <Typography
           variant="h3"
           gutterBottom
           textAlign="center"
           className="font-bold text-gray-900 mb-12"
-          sx={{ fontFamily: 'Shadows Into Light, cursive' }}
         >
           Our Packages
         </Typography>
@@ -107,7 +105,6 @@ export default function PackagesPage() {
               gutterBottom
               textAlign="left"
               className="font-bold text-gray-900 mb-12"
-              sx={{ fontFamily: 'Shadows Into Light, cursive' }}
             >
               Starting at $500
             </Typography>

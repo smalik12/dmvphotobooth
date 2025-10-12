@@ -2,6 +2,13 @@ import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 
 export default function PhotoBoothInfoPage() {
+  const images = [
+    '/photobooth/1.png',
+    '/photobooth/2.png',
+    '/photobooth/3.png',
+    '/photobooth/4.png',
+  ];
+
   return (
     <div style={{ marginTop: '80px' }}>
       <section className="py-12 px-4 text-center max-w-3xl mx-auto">
@@ -13,37 +20,16 @@ export default function PhotoBoothInfoPage() {
           experience unforgettable.
         </p>
 
-        <Image
-          src={'/photobooth/1.png'}
-          alt={'instructions'}
-          width={750}
-          height={400}
-          className="object-cover shadow-md"
-        />
-
-        <Image
-          src={'/photobooth/2.png'}
-          alt={'instructions'}
-          width={750}
-          height={400}
-          className="object-cover shadow-md"
-        />
-
-        <Image
-          src={'/photobooth/3.png'}
-          alt={'instructions'}
-          width={750}
-          height={400}
-          className="object-cover shadow-md"
-        />
-
-        <Image
-          src={'/photobooth/4.png'}
-          alt={'instructions'}
-          width={750}
-          height={400}
-          className="object-cover shadow-md"
-        />
+        {images.map((src, index) => (
+          <Image
+            key={index}
+            src={src}
+            alt={`Photo booth example ${index + 1}`}
+            width={750}
+            height={400}
+            className="object-cover shadow-md"
+          />
+        ))}
       </section>
     </div>
   );
