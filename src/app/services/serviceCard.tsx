@@ -1,3 +1,4 @@
+import theme from '@/theme';
 import Image from 'next/image';
 
 interface ServiceCardProps {
@@ -17,9 +18,10 @@ export default function ServiceCard({
 
   return (
     <div
-      className={`flex flex-col md:flex-row items-center gap-6 my-8 p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ${
+      className={`flex flex-col md:flex-row items-center gap-6 my-8 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ${
         isImageLeft ? '' : 'md:flex-row-reverse'
       }`}
+      style={{ backgroundColor: theme.palette.secondary.main }}
     >
       {/* Image */}
       <div className="w-full md:w-1/2">
@@ -34,8 +36,15 @@ export default function ServiceCard({
 
       {/* Text Content */}
       <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
-        <h2 className="text-2xl font-semibold text-white">{title}</h2>
-        <p className="text-gray-300 text-lg">{description}</p>
+        <h2
+          className="text-2xl font-semibold"
+          style={{ color: theme.palette.primary.main }}
+        >
+          {title}
+        </h2>
+        <p className="text-lg" style={{ color: theme.palette.text.primary }}>
+          {description}
+        </p>
       </div>
     </div>
   );

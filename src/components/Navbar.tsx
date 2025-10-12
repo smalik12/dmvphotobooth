@@ -5,13 +5,13 @@ import {
   Toolbar,
   Box,
   Button,
-  Link,
   IconButton,
   Drawer,
   List,
   ListItemButton,
   ListItemText,
 } from '@mui/material';
+import NextLink from 'next/link';
 import MenuIcon from '@mui/icons-material/Menu';
 import Image from 'next/image';
 
@@ -46,7 +46,7 @@ export default function Navbar() {
             <Button
               key={link.href}
               color="inherit"
-              component={Link}
+              component={NextLink}
               href={link.href}
               sx={{ fontSize: '1.1rem' }}
             >
@@ -79,7 +79,7 @@ export default function Navbar() {
             <List>
               {navLinks.map((link) => (
                 <ListItemButton
-                  component={Link}
+                  component={NextLink}
                   href={link.href}
                   key={link.href}
                 >
