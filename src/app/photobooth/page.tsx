@@ -2,10 +2,10 @@ import Image from 'next/image';
 
 export default function PhotoBoothInfoPage() {
   const images = [
-    '/photobooth/1.png',
-    '/photobooth/2.png',
-    '/photobooth/3.png',
-    '/photobooth/4.png',
+    '/photobooth/1.PNG',
+    '/photobooth/2.PNG',
+    '/photobooth/3.PNG',
+    '/photobooth/4.PNG',
   ];
 
   return (

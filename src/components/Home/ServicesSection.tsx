@@ -8,7 +8,7 @@ export default function ServicesSection() {
       <Container sx={{ py: 8 }} style={{ backgroundColor: '#f9f9f9' }}>
         <Grid2 container spacing={4} sx={{ mt: 2 }}>
           {[
-            { title: 'Weddings', image: '/wedding-card-just-photo.jpg' },
+            { title: 'Weddings', image: '/wedding-card-just-photo.JPG' },
             { title: 'Corporate Events', image: '/corporate-card.jpeg' },
             { title: 'Parties', image: '/birthday-card.jpg' },
           ].map((service, index) => (
