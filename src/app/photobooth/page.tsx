@@ -71,7 +71,7 @@ export default function PhotoBoothInfoPage() {
     {
       src: '/photobooth/backdrops/white-flower.png',
       alt: 'White Flower Backdrop (Extra Cost)',
-      label: 'WHITE FLOWER',
+      label: 'WHITE FLOWER (Extra Cost)',
       video: '/photobooth/backdrops/white-flower-slideshow.mp4',
     },
   ];
