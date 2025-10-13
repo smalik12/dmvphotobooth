@@ -1,12 +1,9 @@
-'use client';
-
-import { Box, Button, Typography, useTheme } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
+import theme from '@/theme';
 
 export default function HeroSection() {
-  const theme = useTheme();
-
   return (
     <Box
       component="section"
@@ -84,7 +81,8 @@ export default function HeroSection() {
               WebkitTextFillColor: 'transparent',
             }}
           >
-            Weddings • Corporate Events • Birthdays • Any Occasion
+            Our goal is to make your special day into a memory that will last a
+            lifetime
           </Typography>
 
           <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
