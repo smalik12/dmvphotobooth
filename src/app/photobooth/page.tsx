@@ -61,6 +61,19 @@ export default function PhotoBoothInfoPage() {
       label: 'GOLD',
       video: '/photobooth/backdrops/gold-slideshow.mp4',
     },
+    {
+      src: '/photobooth/backdrops/white.png',
+      alt: 'White Backdrop',
+      label: 'WHITE',
+      video: '/photobooth/backdrops/white-slideshow.mp4',
+    },
+
+    {
+      src: '/photobooth/backdrops/white-flower.png',
+      alt: 'White Flower Backdrop (Extra Cost)',
+      label: 'WHITE FLOWER',
+      video: '/photobooth/backdrops/white-flower-slideshow.mp4',
+    },
   ];
 
   return (
@@ -100,28 +113,6 @@ export default function PhotoBoothInfoPage() {
                   <p className="mt-2 font-semibold">{label}</p>
                 </div>
               ))}
-              {/* <div>
-                <Image
-                  src="/photobooth/backdrops/white.png"
-                  alt="White Backdrop"
-                  width={150}
-                  height={150}
-                  className="mx-auto object-cover rounded"
-                />
-                <p className="mt-2 font-semibold">WHITE</p>
-              </div> */}
-              {/* <div>
-                <Image
-                  src="/photobooth/backdrops/flower.png"
-                  alt="White Flower Backdrop"
-                  width={150}
-                  height={150}
-                  className="mx-auto object-cover rounded"
-                />
-                <p className="mt-2 font-semibold">
-                  WHITE FLOWER BACKDROP <br /> (WEDDINGS) EXTRA $30
-                </p>
-              </div> */}
             </div>
           </div>
           <Dialog
