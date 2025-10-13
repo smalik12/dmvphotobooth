@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
 import {
   Box,
   Paper,
@@ -10,14 +11,9 @@ import {
   Link as MuiLink,
   MenuItem,
 } from '@mui/material';
-import {
-  FaInstagram,
-  FaFacebook,
-  FaTiktok,
-  FaEnvelope,
-  FaPhone,
-} from 'react-icons/fa';
+import { FaInstagram, FaTiktok, FaEnvelope, FaPhone } from 'react-icons/fa';
 import theme from '@/theme';
+import { contactInfo } from '@/config/contact';
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -55,10 +51,40 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
-    // submit logic (e.g. send to API or email service)
-    console.log('Submitting', form);
-    // optionally reset
-    // setForm({ name: '', email: '', message: '' });
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+        {
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          eventType: form.eventType,
+          zipCode: form.zipCode,
+          guestCount: form.guestCount,
+          boothType: form.boothType,
+          message: form.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string
+      )
+      .then(() => {
+        alert('Message sent successfully!');
+        setForm({
+          name: '',
+          email: '',
+          message: '',
+          eventType: '',
+          zipCode: '',
+          guestCount: '',
+          boothType: '',
+          phone: '',
+        });
+      })
+      .catch((error) => {
+        console.error('EmailJS error:', error);
+        alert('Failed to send message, please try again.');
+      });
   };
 
   return (
@@ -211,48 +237,37 @@ export default function Contact() {
 
         <Box sx={{ mt: 4, textAlign: 'center' }}>
           <Typography variant="subtitle1" gutterBottom>
-            Or reach me via:
+            Or reach us via:
           </Typography>
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
             <MuiLink
-              href="mailto:info@dmvphotobooth.com"
+              href={`mailto:${contactInfo.email}`}
               color="inherit"
               underline="none"
               sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}
             >
-              <FaEnvelope /> Email
+              <FaEnvelope /> {contactInfo.email}
             </MuiLink>
             <MuiLink
-              href="tel:123-456-7890"
+              href={`tel:${contactInfo.phone}`}
               color="inherit"
               underline="none"
               sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}
             >
-              <FaPhone /> Call
+              <FaPhone /> {contactInfo.phone}
             </MuiLink>
           </Box>
           <Box
             sx={{ mt: 2, display: 'flex', justifyContent: 'center', gap: 2 }}
           >
             <MuiLink
-              href="https://www.instagram.com/dmvphotobooth"
+              href={contactInfo.instagram}
               target="_blank"
               rel="noopener"
             >
               <FaInstagram size={24} />
             </MuiLink>
-            <MuiLink
-              href="https://www.facebook.com/dmvphotobooth"
-              target="_blank"
-              rel="noopener"
-            >
-              <FaFacebook size={24} />
-            </MuiLink>
-            <MuiLink
-              href="https://www.tiktok.com/@dmvphotobooth"
-              target="_blank"
-              rel="noopener"
-            >
+            <MuiLink href={contactInfo.tiktok} target="_blank" rel="noopener">
               <FaTiktok size={24} />
             </MuiLink>
           </Box>
