@@ -1,16 +1,7 @@
 'use client';
-import React, { JSX, useState } from 'react';
-import { Typography, Tabs, Tab, Box } from '@mui/material';
-import {
-  FaCamera,
-  FaStar,
-  FaCrown,
-  FaClock,
-  FaGift,
-  FaCheckCircle,
-  FaCameraRetro,
-  FaVideo,
-} from 'react-icons/fa';
+import React, { useState } from 'react';
+import { Typography, Tabs, Tab } from '@mui/material';
+import { FaCameraRetro, FaVideo } from 'react-icons/fa';
 import PhotoBoothPackages from '@/components/PhotoBoothPackages';
 import Photo360Packages from '@/components/Photo360Packages';
 
