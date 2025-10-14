@@ -22,7 +22,7 @@ export default function Navbar() {
     { label: 'Home', href: '/' },
     { label: 'Packages', href: '/packages' },
     { label: 'PhotoBooth Info', href: '/photobooth' },
-    { label: 'Services', href: '/services' },
+    // { label: 'Services', href: '/services' },
     { label: 'Contact', href: '/contact' },
   ];
 

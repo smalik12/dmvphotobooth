@@ -4,6 +4,7 @@ import { Typography, Tabs, Tab } from '@mui/material';
 import { FaCameraRetro, FaVideo } from 'react-icons/fa';
 import PhotoBoothPackages from '@/components/PhotoBoothPackages';
 import Photo360Packages from '@/components/Photo360Packages';
+import { shadowsFont } from '@/theme';
 
 export default function PackagesPage() {
   const [tabValue, setTabValue] = useState(0);
@@ -16,6 +17,7 @@ export default function PackagesPage() {
           gutterBottom
           textAlign="center"
           className="font-bold text-gray-900 mb-12"
+          fontFamily={shadowsFont.style.fontFamily}
         >
           Our Packages
         </Typography>
@@ -46,7 +48,7 @@ export default function PackagesPage() {
           <Tab
             icon={<FaVideo />}
             iconPosition="start"
-            label="360 Camera"
+            label="360 Booth"
             sx={{
               fontWeight: tabValue === 1 ? 'bold' : 'normal',
               color: tabValue === 1 ? 'secondary.main' : 'black',

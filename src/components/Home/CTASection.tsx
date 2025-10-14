@@ -1,4 +1,4 @@
-import theme from '@/theme';
+import theme, { shadowsFont } from '@/theme';
 import { Box, Typography, Button } from '@mui/material';
 import Link from 'next/link';
 
@@ -17,7 +17,7 @@ export default function CTASection() {
           variant="h4"
           fontWeight="bold"
           color="black"
-          fontFamily={theme.typography.fontFamily}
+          fontFamily={shadowsFont.style.fontFamily}
           gutterBottom
         >
           Ready to Book Your Event?

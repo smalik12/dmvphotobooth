@@ -56,10 +56,15 @@ const packages = [
 
 const Photo360Packages: React.FC = () => (
   <div>
-    <Typography variant="h4" component="h2" gutterBottom>
-      360 Booth Packages
+    <Typography
+      variant="h6"
+      gutterBottom
+      textAlign="left"
+      className="font-bold text-gray-900 mb-12"
+    >
+      Starting at $600
     </Typography>
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
       {packages.map((pkg) => (
         <PackageSectionCard
           key={pkg.title}

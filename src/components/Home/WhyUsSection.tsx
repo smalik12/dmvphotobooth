@@ -1,4 +1,4 @@
-import theme from '@/theme';
+import theme, { shadowsFont } from '@/theme';
 import { Box, Container, Grid2, Paper, Typography } from '@mui/material';
 import { FaCameraRetro, FaHandshake, FaRegCalendarAlt } from 'react-icons/fa';
 
@@ -8,11 +8,11 @@ export default function WhyUsSection() {
       <Box sx={{ py: 8, backgroundColor: theme.palette.background.default }}>
         <Container>
           <Typography
-            variant="h3"
+            variant="h4"
             fontWeight="bold"
             textAlign="center"
             color="black"
-            fontFamily={theme.typography.fontFamily}
+            fontFamily={shadowsFont.style.fontFamily}
             gutterBottom
           >
             Why Choose Us

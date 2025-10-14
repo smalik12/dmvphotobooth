@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 import Dialog from '@mui/material/Dialog';
 import OpenInFull from '@mui/icons-material/OpenInFull';
+import { Typography } from '@mui/material';
+import { shadowsFont } from '@/theme';
 
 export default function PhotoBoothInfoPage() {
   const templates = [
@@ -77,11 +79,24 @@ export default function PhotoBoothInfoPage() {
   ];
 
   return (
-    <div style={{ marginTop: '80px' }}>
+    <div
+      style={{
+        marginTop: '80px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}
+    >
       <section className="py-12 px-4 max-w-5xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8 text-center">
+        <Typography
+          variant="h2"
+          gutterBottom
+          textAlign="center"
+          className="font-bold text-gray-900 mb-12"
+          fontFamily={shadowsFont.style.fontFamily}
+        >
           Photo Booth Experience
-        </h1>
+        </Typography>
 
         {/* Backdrops Section */}
         <section className="mb-16">

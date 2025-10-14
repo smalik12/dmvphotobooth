@@ -1,6 +1,7 @@
 import React, { JSX } from 'react';
 import { Typography } from '@mui/material';
 import { FaCheckCircle } from 'react-icons/fa';
+import { shadowsFont } from '@/theme';
 
 interface IPackageSectionCardProps {
   title: string;
@@ -28,6 +29,7 @@ export default function PackageSectionCard({
         gutterBottom
         fontWeight="bold"
         className="text-center font-semibold text-gray-800"
+        fontFamily={shadowsFont.style.fontFamily}
       >
         {title}
       </Typography>

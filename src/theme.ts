@@ -1,15 +1,12 @@
 import { createTheme } from '@mui/material/styles';
 import { Shadows_Into_Light } from 'next/font/google';
 
-const shadows = Shadows_Into_Light({
+export const shadowsFont = Shadows_Into_Light({
   weight: '400',
   subsets: ['latin'],
 });
 
 const theme = createTheme({
-  typography: {
-    fontFamily: shadows.style.fontFamily,
-  },
   palette: {
     primary: {
       main: '#004aad',   // your blue
@@ -19,7 +16,7 @@ const theme = createTheme({
     },
     background: {
       default: '#ebceb5', // your tan
-      },
+    },
   },
 });
 

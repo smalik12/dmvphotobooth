@@ -1,5 +1,6 @@
 import { Typography } from '@mui/material';
 import ServiceCard from './serviceCard';
+import { shadowsFont } from '@/theme';
 
 const services = [
   {
@@ -21,7 +22,12 @@ const services = [
 export default function Services() {
   return (
     <div style={{ marginTop: '120px' }}>
-      <Typography variant="h3" gutterBottom textAlign="center">
+      <Typography
+        variant="h3"
+        gutterBottom
+        textAlign="center"
+        fontFamily={shadowsFont.style.fontFamily}
+      >
         Our Services
       </Typography>
       <div className="max-w-6xl mx-auto px-4">

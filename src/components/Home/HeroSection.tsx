@@ -13,7 +13,7 @@ export default function HeroSection() {
         flexDirection: { xs: 'column', md: 'row' },
         width: '100%',
         minHeight: '80vh',
-        mt: 8,
+        mt: 12,
         [theme.breakpoints.up('sm')]: {
           minHeight: '90vh',
         },

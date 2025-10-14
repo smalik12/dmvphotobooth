@@ -12,7 +12,7 @@ import {
   MenuItem,
 } from '@mui/material';
 import { FaInstagram, FaTiktok, FaEnvelope, FaPhone } from 'react-icons/fa';
-import theme from '@/theme';
+import theme, { shadowsFont } from '@/theme';
 import { contactInfo } from '@/config/contact';
 
 export default function Contact() {
@@ -116,7 +116,7 @@ export default function Contact() {
           variant="h4"
           gutterBottom
           sx={{
-            fontFamily: theme.typography.fontFamily,
+            fontFamily: shadowsFont.style.fontFamily,
             fontWeight: 'bold',
             color: theme.palette.primary.main,
             textAlign: 'center',

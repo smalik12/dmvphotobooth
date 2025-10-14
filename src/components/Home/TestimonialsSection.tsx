@@ -1,4 +1,4 @@
-import theme from '@/theme';
+import theme, { shadowsFont } from '@/theme';
 import { Box, Container, Typography, Grid2, Paper } from '@mui/material';
 
 export default function TestimonialsSection() {
@@ -11,7 +11,7 @@ export default function TestimonialsSection() {
             fontWeight="bold"
             textAlign="center"
             color="black"
-            fontFamily={theme.typography.fontFamily}
+            fontFamily={shadowsFont.style.fontFamily}
             gutterBottom
           >
             What Our Clients Say
