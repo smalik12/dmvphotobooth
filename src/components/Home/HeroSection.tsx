@@ -1,9 +1,28 @@
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Typography, IconButton } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import theme from '@/theme';
+import { useState } from 'react';
+import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material';
 
 export default function HeroSection() {
+  const images = [
+    '/heroSection/hero-photobooth.png',
+    '/heroSection/hero-photobooth2.png',
+    '/heroSection/hero-photobooth3.png',
+  ];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
   return (
     <Box
       component="section"
@@ -30,13 +49,58 @@ export default function HeroSection() {
           '& img': { objectFit: { xs: 'contain', md: 'cover' } },
         }}
       >
-        <Image
-          src="/hero-photobooth.png"
-          alt="Hero photobooth"
-          fill
-          priority
-          style={{ objectFit: 'cover', objectPosition: 'center' }}
-        />
+        {images.map((src, index) => (
+          <Image
+            key={src}
+            src={src}
+            alt={`Hero photobooth ${index + 1}`}
+            fill
+            priority={index === currentImageIndex}
+            style={{
+              objectFit: 'cover',
+              objectPosition: 'center',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              opacity: index === currentImageIndex ? 1 : 0,
+              transition: 'opacity 1s ease-in-out',
+            }}
+          />
+        ))}
+        <IconButton
+          onClick={handlePrev}
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: 8,
+            transform: 'translateY(-50%)',
+            color: '#fff',
+            backgroundColor: 'rgba(0,0,0,0.4)',
+            '&:hover': { backgroundColor: 'rgba(0,0,0,0.6)' },
+            zIndex: 10,
+          }}
+          aria-label="Previous image"
+        >
+          <ArrowBackIos />
+        </IconButton>
+        <IconButton
+          onClick={handleNext}
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            right: 8,
+            transform: 'translateY(-50%)',
+            color: '#fff',
+            backgroundColor: 'rgba(0,0,0,0.4)',
+            '&:hover': { backgroundColor: 'rgba(0,0,0,0.6)' },
+            zIndex: 10,
+          }}
+          aria-label="Next image"
+        >
+          <ArrowForwardIos />
+        </IconButton>
       </Box>
 
       {/* Right / Content side */}
