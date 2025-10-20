@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import ThemeRegistry from '@/components/ThemeRegistry';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: 'DMV Photo Booth',
@@ -19,6 +20,7 @@ export default function RootLayout({
         <ThemeRegistry>
           <Navbar />
           {children}
+          <Analytics />
         </ThemeRegistry>
       </body>
     </html>

@@ -19,16 +19,18 @@ export default function TestimonialsSection() {
           <Grid2 container spacing={4} sx={{ mt: 2 }}>
             {[
               {
-                quote: 'The photo booth was the highlight of our wedding!',
-                author: 'Sarah & Mike',
+                quote: 'You guys are great, thank you for everything!',
+                author: 'JK House of Grace, Assisted Living',
               },
               {
-                quote: 'Professional setup and our employees loved it.',
-                author: 'TechCorp Inc.',
+                quote:
+                  'We are extremely happy with the memories we now have forever thanks to your services!',
+                author: 'Jorge & Wendy Hernandez',
               },
               {
-                quote: "Amazing service! We'll definitely book again.",
-                author: 'Emily R.',
+                quote:
+                  'The set up and staff were so professional and the photos came out so beautiful, I have recommended them to all my family and friends!',
+                author: 'Saqib & Candy Malik',
               },
             ].map((testimonial, index) => (
               <Grid2 size={{ xs: 12, md: 4 }} key={index}>
