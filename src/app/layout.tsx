@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import ThemeRegistry from '@/components/ThemeRegistry';
 import { Analytics } from '@vercel/analytics/next';
+import { Toaster } from 'react-hot-toast';
+import ScrollProgress from '@/components/ScrollProgress';
 
 export const metadata: Metadata = {
   title: 'DMV Photo Booth',
@@ -18,9 +21,42 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeRegistry>
+          <ScrollProgress />
           <Navbar />
           {children}
+          <Footer />
           <Analytics />
+          <Toaster
+            position="top-right"
+            toastOptions={{
+              duration: 5000,
+              style: {
+                background: '#fff',
+                color: '#333',
+                borderRadius: '12px',
+                padding: '16px',
+                boxShadow: '0 8px 24px rgba(0, 74, 173, 0.15)',
+              },
+              success: {
+                iconTheme: {
+                  primary: '#004aad',
+                  secondary: '#fff',
+                },
+                style: {
+                  border: '2px solid #004aad',
+                },
+              },
+              error: {
+                iconTheme: {
+                  primary: '#DC2626',
+                  secondary: '#fff',
+                },
+                style: {
+                  border: '2px solid #DC2626',
+                },
+              },
+            }}
+          />
         </ThemeRegistry>
       </body>
     </html>

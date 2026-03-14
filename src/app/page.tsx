@@ -5,7 +5,11 @@ import HeroSection from '@/components/Home/HeroSection';
 import ServicesSection from '@/components/Home/ServicesSection';
 import theme from '@/theme';
 import WhyUsSection from '@/components/Home/WhyUsSection';
+import ProcessSection from '@/components/Home/ProcessSection';
+import StatsSection from '@/components/Home/StatsSection';
 import TestimonialsSection from '@/components/Home/TestimonialsSection';
+import FAQSection from '@/components/Home/FAQSection';
+import GallerySection from '@/components/Home/GallerySection';
 import CTASection from '@/components/Home/CTASection';
 
 export default function Home() {
@@ -20,8 +24,20 @@ export default function Home() {
       {/* Why us */}
       <WhyUsSection />
 
+      {/* Process Timeline */}
+      <ProcessSection />
+
+      {/* Stats Section */}
+      <StatsSection />
+
       {/* Testimonials */}
       <TestimonialsSection />
+
+      {/* FAQ Section */}
+      <FAQSection />
+
+      {/* Gallery Section */}
+      <GallerySection />
 
       {/* CTA Section */}
       <CTASection />
