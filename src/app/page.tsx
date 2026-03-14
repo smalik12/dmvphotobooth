@@ -9,7 +9,6 @@ import ProcessSection from '@/components/Home/ProcessSection';
 import StatsSection from '@/components/Home/StatsSection';
 import TestimonialsSection from '@/components/Home/TestimonialsSection';
 import FAQSection from '@/components/Home/FAQSection';
-import GallerySection from '@/components/Home/GallerySection';
 import CTASection from '@/components/Home/CTASection';
 
 export default function Home() {
