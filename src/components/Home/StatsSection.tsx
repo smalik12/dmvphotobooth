@@ -4,12 +4,7 @@ import { Box, Container, Typography, Grid2 } from '@mui/material';
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import CountUp from 'react-countup';
-import {
-  FaCalendarAlt,
-  FaUsers,
-  FaCamera,
-  FaTrophy,
-} from 'react-icons/fa';
+import { FaCalendarAlt, FaUsers, FaCamera, FaTrophy } from 'react-icons/fa';
 
 const MotionBox = motion(Box);
 
@@ -23,13 +18,13 @@ interface Stat {
 const stats: Stat[] = [
   {
     icon: <FaCalendarAlt size={40} />,
-    value: 500,
+    value: 100,
     suffix: '+',
     label: 'Events Hosted',
   },
   {
     icon: <FaUsers size={40} />,
-    value: 1200,
+    value: 200,
     suffix: '+',
     label: 'Happy Customers',
   },
@@ -41,7 +36,7 @@ const stats: Stat[] = [
   },
   {
     icon: <FaTrophy size={40} />,
-    value: 5,
+    value: 2,
     suffix: '+',
     label: 'Years in Business',
   },
@@ -75,7 +70,7 @@ export default function StatsSection() {
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut" as const,
+        ease: 'easeOut' as const,
       },
     },
   };
@@ -85,7 +80,8 @@ export default function StatsSection() {
       ref={ref}
       sx={{
         py: 8,
-        background: 'linear-gradient(135deg, rgba(0, 74, 173, 0.05) 0%, rgba(235, 206, 181, 0.05) 100%)',
+        background:
+          'linear-gradient(135deg, rgba(0, 74, 173, 0.05) 0%, rgba(235, 206, 181, 0.05) 100%)',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -99,7 +95,8 @@ export default function StatsSection() {
           width: 300,
           height: 300,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(0, 74, 173, 0.1) 0%, transparent 70%)',
+          background:
+            'radial-gradient(circle, rgba(0, 74, 173, 0.1) 0%, transparent 70%)',
           pointerEvents: 'none',
         }}
       />
@@ -111,7 +108,8 @@ export default function StatsSection() {
           width: 300,
           height: 300,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(235, 206, 181, 0.15) 0%, transparent 70%)',
+          background:
+            'radial-gradient(circle, rgba(235, 206, 181, 0.15) 0%, transparent 70%)',
           pointerEvents: 'none',
         }}
       />
@@ -149,7 +147,8 @@ export default function StatsSection() {
                       width: 80,
                       height: 80,
                       borderRadius: '50%',
-                      background: 'linear-gradient(135deg, #004aad 0%, #0056c9 100%)',
+                      background:
+                        'linear-gradient(135deg, #004aad 0%, #0056c9 100%)',
                       color: '#fff',
                       mb: 2,
                       boxShadow: '0 4px 15px rgba(0, 74, 173, 0.3)',
@@ -163,7 +162,8 @@ export default function StatsSection() {
                     variant="h3"
                     sx={{
                       fontWeight: 'bold',
-                      background: 'linear-gradient(135deg, #004aad 0%, #ebceb5 100%)',
+                      background:
+                        'linear-gradient(135deg, #004aad 0%, #ebceb5 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       mb: 1,
