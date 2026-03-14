@@ -740,7 +740,7 @@ export default function Contact() {
                     </MuiLink>
                   </Box>
                   <Typography variant="body2" sx={{ mt: 2, color: '#666' }}>
-                    Check out our latest events and behind-the-scenes content
+                    Check out our latest events and behind-the-scenes content!
                   </Typography>
                 </CardContent>
               </MotionCard>
