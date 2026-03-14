@@ -57,7 +57,7 @@ export const faqs: FAQ[] = [
   },
   {
     question: 'What\'s your cancellation policy?',
-    answer: 'We require a $100 deposit to secure your booking. If you need to cancel, deposits are refundable up to 30 days before your event. Cancellations within 30 days forfeit the deposit. We\'re happy to work with you on rescheduling when possible.',
+    answer: 'We require a $100 deposit to secure your booking. If you need to cancel, deposits are refundable up to 30 days from the date of your booking. Cancellations within 30 days forfeit the deposit. We\'re happy to work with you on rescheduling when possible.',
     category: 'Booking',
   },
   {

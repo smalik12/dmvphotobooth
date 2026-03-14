@@ -36,9 +36,6 @@ export default function Home() {
       {/* FAQ Section */}
       <FAQSection />
 
-      {/* Gallery Section */}
-      <GallerySection />
-
       {/* CTA Section */}
       <CTASection />
     </Box>
