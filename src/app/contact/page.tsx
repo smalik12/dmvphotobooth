@@ -22,7 +22,6 @@ import {
   FaEnvelope,
   FaPhone,
   FaMapMarkerAlt,
-  FaClock,
   FaPaperPlane,
 } from 'react-icons/fa';
 import { CheckCircle } from '@mui/icons-material';
