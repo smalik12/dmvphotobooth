@@ -10,16 +10,16 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function HeroSection() {
   const images = [
-    '/heroSection/hero-photobooth.png',
-    '/heroSection/hero-photobooth2.png',
-    '/heroSection/hero-photobooth3.png',
-    '/heroSection/hero-photobooth4.png',
-    '/heroSection/hero-photobooth5.png',
-    '/heroSection/hero-photobooth6.png',
-    '/heroSection/hero-photobooth7.png',
-    '/heroSection/hero-photobooth8.png',
-    '/heroSection/hero-photobooth9.png',
-    '/heroSection/hero-photobooth10.png',
+    '/heroSection/hero-photobooth.jpg',
+    '/heroSection/hero-photobooth2.jpg',
+    '/heroSection/hero-photobooth3.jpg',
+    '/heroSection/hero-photobooth4.jpg',
+    '/heroSection/hero-photobooth5.jpg',
+    '/heroSection/hero-photobooth6.jpg',
+    '/heroSection/hero-photobooth7.jpg',
+    '/heroSection/hero-photobooth8.jpg',
+    '/heroSection/hero-photobooth9.jpg',
+    '/heroSection/hero-photobooth10.jpg',
   ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
