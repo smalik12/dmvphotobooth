@@ -13,6 +13,13 @@ export default function HeroSection() {
     '/heroSection/hero-photobooth.png',
     '/heroSection/hero-photobooth2.png',
     '/heroSection/hero-photobooth3.png',
+    '/heroSection/hero-photobooth4.png',
+    '/heroSection/hero-photobooth5.png',
+    '/heroSection/hero-photobooth6.png',
+    '/heroSection/hero-photobooth7.png',
+    '/heroSection/hero-photobooth8.png',
+    '/heroSection/hero-photobooth9.png',
+    '/heroSection/hero-photobooth10.png',
   ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
